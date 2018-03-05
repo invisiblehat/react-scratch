@@ -1,0 +1,34 @@
+/**
+ * index.js
+ */
+ 
+import http from 'http';
+import express from 'express';
+
+// Express app setup
+const app = express();
+const port = process.env.PORT;
+
+const server = http.createServer(app);
+server.listen(port);
+server.on('listening', () => {
+  console.log('Server is listening on port: '+port);
+});
+
+// route handler
+// app.get() method is a route method for handling GET requests made to the server. 
+//      It gets any get request ('*' = any GET request).
+//      And responds with: "hello express"
+app.get('*', (req, res) => {
+  res.end('Hello Express');
+});
+
+
+
+
+// const logSomething = options => ({
+//   ...options,
+//   anotherOption: 'Hello!',
+// });
+// const options = logSomething({ one: '1', two: '2' });
+// console.log(options);
