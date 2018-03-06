@@ -44,7 +44,7 @@ app.use((req, res, next) => {
   next(err);
 });
 
-// error handlers 
+// error handlers
 app.use((err, req, res, next) => {
   res.status(err.status || 500);
   res.render('error', {
