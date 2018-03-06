@@ -1,6 +1,10 @@
-doctype html
-html
-  head
-    title Hello Joel
-  body
+extends layout
+
+block header
+  header
     h1 Hello Joel
+  
+block content
+  main
+    p some content 
+      a(href='/about') About us

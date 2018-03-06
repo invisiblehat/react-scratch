@@ -1,0 +1,10 @@
+extends layout
+
+block header
+  header
+    h1 Error
+  
+block content
+  main
+    p There was an error.
+    pre #{error.stack}
