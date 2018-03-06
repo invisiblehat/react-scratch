@@ -22,7 +22,8 @@
     "morgan": "^1.9.0",
     "pug": "^2.0.0-rc.4",
     "socket.io": "~0.9.14",
-    "webpack": "^4.1.0"
+    "webpack": "^4.1.0",
+    "webpack-cli": "^2.0.10"
   },
   "scripts": {
     "dev": "nodemon --exec babel-node ./server/index.js",
@@ -59,7 +60,8 @@
     "parser": "babel-eslint"
   },
   "eslintIgnore": [
-    "node_modules/*"
+    "node_modules/*",
+    "public/*"
   ],
   "pre-commit": [
     "lint"
